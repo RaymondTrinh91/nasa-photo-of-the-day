@@ -31,3 +31,11 @@
     transform: rotate(360deg);
   }
 }
+.dailyImg{
+  z-index: -1;
+}
+
+.button{
+  z-index: 2;
+  color: white;
+}

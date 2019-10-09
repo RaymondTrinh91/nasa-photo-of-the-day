@@ -6,7 +6,7 @@ const NasaApod = props => {
         <div className = "imageContain">
             <h2>{props.title}</h2>
             <p>{props.desciption}</p> 
-            <img alt="A random photo from Nasa!" src={props.hdurl}/>
+            <img className="dailyImg" alt="A random photo from Nasa!" src={props.hdurl}/>
             <p>{props.date}</p>
         </div>
     )
