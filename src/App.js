@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
 import axios from "axios";
-import NasaApod from "./Components/image";
+import NasaApod from "./Components/Image";
+import ImageDescription from "./Components/ImageDescription";
 //https://api.nasa.gov/planetary/apod
 
 
@@ -9,9 +10,9 @@ function App() {
 
 let today = new Date();
 let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-let yesterday = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+(today.getDate()-1);
+
 const [nasaImg, setNasaImg] = useState([]);
-const [imgDate, setImgDate] = useState(date);
+const [imgDate] = useState(date);
 console.log(imgDate);
 console.log(today.getDate()-1);
 //API GRAB
@@ -30,13 +31,17 @@ useEffect(() => {
   return (
     <div className="App">
       <div className = "container">
-          <button className="button left" onClick={() => setImgDate(yesterday)}> Go Back </button>
-          
+        <h1 className = "title">Nasa's Picture of the Day!</h1> 
           <NasaApod 
           title={nasaImg.title} 
-          description={nasaImg.explanation} 
-          hdurl={nasaImg.hdurl} 
-          date={nasaImg.date} 
+          description={nasaImg.explanation}
+          date={nasaImg.date}
+          hdurl={nasaImg.hdurl}  
+          />
+          <ImageDescription
+          title={nasaImg.title} 
+          description={nasaImg.explanation}
+          date={nasaImg.date}
           />
       </div>
     </div>
