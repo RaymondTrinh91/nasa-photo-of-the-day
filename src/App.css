@@ -31,3 +31,33 @@
     transform: rotate(360deg);
   }
 }
+.title{
+  position: absolute;
+  text-align: center;
+  color:white;
+  z-index: 2;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.imageContain{
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+.dailyImg{
+  min-width: 50%;
+  min-height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  z-index: -1;
+}
+
+
